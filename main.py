@@ -1,3 +1,5 @@
+DESCUENTO = .1 # 10%
+
 def leer_datos(datos: list):
     assert len(datos) == 2, 'Cantidad incorrecta de datos'
     datos[0] = float(input('Ingrese precio (S/): '))
@@ -7,7 +9,7 @@ def calcular_subtotal(precio, cantidad):
     return precio * cantidad
 
 def calcular_descuento(subtotal):
-    return .1 * subtotal
+    return DESCUENTO * subtotal
 
 if __name__ == '__main__':
     print('Bienvenido!\n')
@@ -34,5 +36,4 @@ if __name__ == '__main__':
     print(s1:=f'+ subtotal:  +S/{subtotal}')
     print(s2:=f'- descuento: -S/{descuento}')
     print('-' * max(len(s1), len(s2)))
-    print(f'* Total:        {total}')
-    print()
+    print(f'* Total:        {total}\n')
